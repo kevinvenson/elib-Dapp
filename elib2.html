@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>E-Library</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+   .navbar {
+     margin-bottom: 0;
+     border-radius: 0;
+   }
+   .row.content {height: 450px}
+   .sidenav {
+     padding-top: 20px;
+     background-color: #f1f1f1;
+     height:130%;
+   }
+   footer {
+     background-color: #555;
+     color: white;
+     padding: 14px;
+   }
+   @media screen and (max-width: 767px) {
+     .sidenav {
+       height: auto;
+       padding: 15px;
+     }
+     .row.content {height:auto;}
+   }
+      input.search[type=text] {
+      display:block;
+      margin: 0 0 0 auto;
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url("img/search.png");
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      background-size: 30px 30px;
+      padding: 12px 20px 12px 45px;
+      -webkit-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out;
+      }
+      input.search[type=text]:focus {
+      width: 30%;
+      }
+    
+    input[type=text], input[type=password] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    }
+    input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+    }
+    .registerbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+    }
+    .registerbtn:hover {
+    opacity: 1;
+    }
+    table {
+      font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+th, td {
+    border: 1px solid #dddddd;
+    padding: 15px;
+    text-align: left;
+    
+}
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+table tr:nth-child(odd) {
+   background-color: #fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button> 
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#emp" data-toggle="tab">DApp</a></li>
+        <li><a href="#ver" data-toggle="tab">Verifier</a></li>
+        <li><a href="#pub" data-toggle="tab">Publisher</a></li>
+        <li><a href="#bok" data-toggle="tab">Book</a></li>
+        <li><a href="#le" data-toggle="tab">Legit Verifier</a></li>
+      </ul>
+      <form>
+        <right>
+          <input class="search" type="text" name="search" placeholder="search">
+        </right>
+      </form>
+    </div>
+  </div>
+</nav>   
+            
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+    </div>  
+    <div class="col-sm-8 text-left"> 
+            <center style="font-size:50px;">Library DApp</center>
+            <br>                 
+                <table>
+                    <tr>
+                        <th>Verifier</th>
+                        <th>Category</th>
+                        <th>Title Book</th>
+                        <th>Autjor</th>
+                        <th>Publisher</th>
+                    </tr>
+                    <tr>           
+                        <td>try</td>
+                        <td>try</td>
+                        <td>try</td>
+                        <td>trty</td>
+                        <td>tyr</td>
+                    </tr>
+                    <tr>           
+                        <td>try</td>
+                        <td>try</td>
+                        <td>try</td>
+                        <td>trty</td>
+                        <td>tyr</td>
+                    </tr>
+                </table>             
+        <br>
+        <br>
+
+        <center>
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="emp">
+            </div>
+                <div class="tab-pane fade" id="ver">
+                    <label for="ver"><b>Register as Verifier</b></label><br>
+                    <input class="reg" type="text" placeholder="Address" name="ver" required>
+                    <input class="reg" type="text" placeholder="Verifier Name" name="ver" required><br>
+                    <button type="submit" class="registerbtn">Sign Up</button>
+                </div>
+                <div class="tab-pane fade" id="pub">
+                    <label for="pub"><b>Register as Publisher</b></label><br>
+                    <input class="reg" type="text" placeholder="Address" name="pub" required>
+                    <input class="reg" type="text" placeholder="Publisher Name" name="pub" required><br>
+                    <button type="submit" class="registerbtn">Sign Up</button>
+                </div>
+                <div class="tab-pane fade" id="bok">
+                        <label for="book"><b>Add Book</b></label><br>
+                        <input class="reg" type="text" placeholder="Publisher Address" name="book" required>
+                        <input class="reg" type="text" placeholder="Book Name" name="book" required>
+                        <input class="reg" type="text" placeholder="Author Name" name="book" required><br>
+                        <button type="submit" class="registerbtn">Add</button>                 
+                </div>
+                <div class="tab-pane fade" id="le">
+                        <label for="lg"><b>Add Legit Verifier</b></label><br>
+                        <input class="reg" type="text" placeholder="Owner Address" name="lg" required>
+                        <input class="reg" type="text" placeholder="Publisher's Address" name="lg" required><br>
+                        <button type="submit" class="registerbtn">Add</button>
+                </div>
+         </div>
+      
+    </div>
+  </center>
+    <div class="col-sm-2 sidenav">
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <center>
+      <p>&copy; All rights reserved. 2018</p>
+  </center>
+</footer>
+</body>
+</html>
